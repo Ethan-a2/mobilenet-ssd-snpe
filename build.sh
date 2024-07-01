@@ -100,6 +100,7 @@ echo "===== build target: android-arm64-v8a"
     cmake  -DTARGET_OS=android \
            -DANDROID_ABI=arm64-v8a \
            -DANDROID_PLATFORM=android-23 \
+           -DANDROID_STL=c++_shared \
            -DCMAKE_TOOLCHAIN_FILE=${ANDROID_TOOLCHAIN} \
            -DTARGET_ARCH=arm64-v8a \
            ../..

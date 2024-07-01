@@ -1,7 +1,7 @@
 #include "opencv2/opencv.hpp"
 
 #include "snpe_engine.h"
-
+#include <cstring>
 using namespace std;
 
 cv::Mat normalize(cv::Mat& mat_src) {
@@ -46,7 +46,7 @@ int main(int argc, char** argv)
     string img_path = argv[3];
     cout << "img_path path:" << img_path << endl;
 
-    int runtime = stoi(infer_type);
+    int runtime = atoi(infer_type.c_str());
     zdl::DlSystem::Runtime_t runtime_t;
     switch (runtime) {
         case 0:
